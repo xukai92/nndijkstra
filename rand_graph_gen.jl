@@ -7,9 +7,9 @@ end
 using Distributions
 
 # Number of vertices
-N = ARGS[1] != 0 ? parse(Int64, ARGS[1]) : rand(DiscreteUniform(5, 10))
+N = ARGS[1] != "0" ? parse(Int64, ARGS[1]) : rand(DiscreteUniform(5, 10))
 # Probablity of connection
-p = ARGS[2] != 0 ? parse(Float64, ARGS[2]) : rand(Uniform(0, 1))
+p = ARGS[2] != "0" ? parse(Float64, ARGS[2]) : rand(Uniform(0, 1))
 # Number of graphs
 M = parse(Int64, ARGS[3])
 # Output file
