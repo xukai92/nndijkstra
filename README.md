@@ -28,4 +28,3 @@ How can we encode a graph and its corresponding output to feed into a NN?
 
 ## References
 
-ERDdS, P., & WI, A. R. (1959). On random graphs I. Publ Math Debrecen.
