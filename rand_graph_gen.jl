@@ -6,10 +6,6 @@ end
 
 using Distributions
 
-# Number of vertices
-N = ARGS[1] != "0" ? parse(Int64, ARGS[1]) : rand(DiscreteUniform(5, 10))
-# Probablity of connection
-p = ARGS[2] != "0" ? parse(Float64, ARGS[2]) : rand(Uniform(0, 1))
 # Number of graphs
 M = parse(Int64, ARGS[3])
 # Output file
@@ -19,6 +15,11 @@ o_file = ARGS[4]
 graphs = Array{Any}(M)
 
 for idx in 1:M
+  # Number of vertices
+  N = ARGS[1] != "0" ? parse(Int64, ARGS[1]) : rand(DiscreteUniform(5, 10))
+  # Probablity of connection
+  p = ARGS[2] != "0" ? parse(Float64, ARGS[2]) : rand(Uniform(0, 1))
+
   # Initialise adjacent matrix
   # Without loss of generality we use weigths with whole numbers
   ad_matrix = Array{Int64, 2}(N, N)
@@ -43,6 +44,7 @@ end
 open(o_file, "w") do f
   for idx in 1:M
     ad_matrix = graphs[idx]
+    N = size(ad_matrix)[1]
     write(f, "$N ")
     for row in 1:N; for col in 1:N;
       write(f, "$(ad_matrix[row, col]) ")
