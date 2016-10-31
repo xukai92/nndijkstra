@@ -23,7 +23,7 @@ How can we encode a graph and its corresponding output to feed into a NN?
 
 ## Contributers
 
-- [Kai Xu](xukai92.github.io) - University of Cambridge, 
+- [Kai Xu](xukai92.github.io) - University of Cambridge
 - [Yong Li](neilli1992.github.io) - University of Oxford
 
 ## References
