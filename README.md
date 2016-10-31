@@ -25,3 +25,7 @@ How can we encode a graph and its corresponding output to feed into a NN?
 
 - [Kai Xu](xukai92.github.io) - University of Cambridge, 
 - [Yong Li](neilli1992.github.io) - University of Oxford
+
+## References
+
+ERDdS, P., & WI, A. R. (1959). On random graphs I. Publ Math Debrecen.
