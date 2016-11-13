@@ -13,9 +13,18 @@ This project is aimed to learn the traditional graph algorithm *Dijkstra's short
 
 ## Design details
 
+### I/O File Format
+In current version, input file is generated from the python script.
+The input file is a bunch of lines, each representing one graph.
+In each line, the first number indicates the number of nodes. Assume it's N, then follows N*N numbers, representing the edge weight matrix.
+
+The output format is also a matrix. For each graph, the first line in output is a number indicating the number of edges.
+Then there are N lines, each line with N numbers. The Nth line is the result of running dijkstra using the Nth node as the source.
+e.g. if the 0th line is 0,4,1,2, this means when 0th node is used as the source, the shortest distance between node 0 & 1 is 4, between node 0 & 2 is 1, etc.
+
 ### Graph representation
 
-Adjacency matrix or adjacency list?
+Using adjacency matrix as graph representation.
 
 ### Graph and shorest paht encoding
 
