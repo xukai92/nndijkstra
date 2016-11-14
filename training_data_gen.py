@@ -1,8 +1,8 @@
 from subprocess import Popen, PIPE
 
 N = 1000
-NODE_NUM = 5
-EDGE_NUM = 15
+NODE_NUM = 10
+EDGE_NUM = 50
 WEIGHT_MAX = 100
 
 f = open('training.txt', 'w')
