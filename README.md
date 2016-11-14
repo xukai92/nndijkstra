@@ -7,6 +7,7 @@ This project is aimed to learn the traditional graph algorithm *Dijkstra's short
 - [x] Use the [Random Walk Approach](http://stackoverflow.com/questions/2041517/random-simple-connected-graph-generation-with-given-sparseness) to generate a batch of random (connected) graphs with non-negative weitghs
 - [x] Make labels using Dijkstra's algorithm
 - [ ] Train a NN to learn Dijkstra's algorithm using the synthesised data
+  - [ ] Start with the esiest case: fixed number of nodes, varying number of edges
 - [ ] Use the Erdős–Rényi model to generate a batch of random graphs with negative weitghs
 - [ ] Evaluate the performance of the NN on the new dataset with graphs with negative weitghs
 
