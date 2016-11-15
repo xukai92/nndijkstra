@@ -1,9 +1,9 @@
 from subprocess import Popen, PIPE
 
-N = 1000
-NODE_NUM = 10
-EDGE_NUM = 50
-WEIGHT_MAX = 100
+N = 10
+NODE_NUM = 8
+EDGE_NUM = 16
+WEIGHT_MAX = 16
 
 f = open('training.txt', 'w')
 
@@ -20,12 +20,14 @@ for i in range(N):
     data_vec = map(lambda s: int(s), ", ".join(dij_output.split("\n")).split(", ")[:-1])
 
     # Find the maximum distance from the source
-    dis_max = max(data_vec[1:])
+    print data_vec[2:NODE_NUM+2]
+    dis_min = min(filter(lambda w: w > 0, data_vec[2:NODE_NUM+2]))
 
     # Only edges
-    edges = " ".join(map( lambda i: str(i), data_vec[1:]))
+    graph_vec = map(lambda s: int(s), ", ".join(rand_graph.split(" ")).split(", ")[:-1])
+    edges = " ".join(map( lambda i: str(i), graph_vec[1:]))
 
     # Output
-    f.write("{edges} {dis_max}\n".format(edges=edges, dis_max=dis_max))
+    f.write("{edges} {dis_min}\n".format(edges=edges, dis_min=dis_min))
 
 f.close()
