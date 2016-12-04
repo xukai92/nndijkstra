@@ -43,13 +43,16 @@ if __name__ == "__main__":
     for idx, line in enumerate(graph_str):
         str_list = line.split()
         N = int(str_list[0])
-        assert len(str_list) == (N * N + 1), "Line " + idx + " has incorrect number of inputs."
+        assert len(str_list) == (N * N + 1), "Line " + str(idx) + " has incorrect number of inputs."
 
         edgeWeight = []
         for i in range(N):
             weightFromI = []
             for j in range(N):
-                weightFromI.append(int(str_list[ 1 + (i * N) + j ]))
+                w = int(str_list[1 + (i * N) + j])
+                if w == 0:
+                    w = float("inf")
+                weightFromI.append(w)
 
             edgeWeight.append(weightFromI)
 
