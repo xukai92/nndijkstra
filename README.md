@@ -1,4 +1,4 @@
-# Learn Dijkstra's Algorithm using Artificial Nerual Networks
+# Learning Dijkstra's Algorithm using Artificial Nerual Networks
 
 This project is aimed to learn the traditional graph algorithm *Dijkstra's shortest path algorithm* using a neural network and evaluate its performance on *unexpected input*, i.e. graphs with negative weights.
 
